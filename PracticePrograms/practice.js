@@ -12,6 +12,28 @@
 
 {
   let arr = ["Momin", "Ashima", "Sapna", "Muneesh", "Shivam"];
-  const a = arr.filter((item) => item.length > 5);
+  const values = arr.filter((item) => item.length > 5);
+  console.log(values);
+}
+
+{
+  let arr = [1, 2, 3, 4, 5, 6];
+  const value = arr.find((item) => item % 2 == 0); // find return first element only
+  console.log(value);
+}
+
+{
+  let arr = [1, 2, 3, 4, 5, 6];
+  const a = arr.reduce(rFun);
+  function rFun(total, value) {
+    return total + value;
+  }
   console.log(a);
+}
+
+{
+  let arr = ["momin", "Momin"];
+  let new_arr = arr.map((item) => item).sort();
+
+  console.log(new_arr);
 }
