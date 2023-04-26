@@ -17,11 +17,14 @@
 {
   // forEach() method
   let numbers = [45, 4, 9, 16, 25];
-  numbers.forEach(forFunction);
+  numbers.forEach((item) => {
+    console.log(item);
+  });
+  //numbers.forEach(forFunction);
 
-  function forFunction(value, index) {
-    console.log("Index: " + index + " Value: " + value);
-  }
+  //  function forFunction(value, index) {
+  //  console.log("Index: " + index + " Value: " + value);
+  //}
 }
 
 {
