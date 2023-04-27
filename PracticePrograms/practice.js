@@ -37,3 +37,18 @@
 
   console.log(new_arr);
 }
+
+let arr = [1, 2, 3, 4, 5];
+
+let primeNumbers = arr.filter(isPrime);
+function isPrime(item) {
+  let flag = 0;
+  for (var i = 2; i <= Math.sqrt(item); i++) {
+    if (item % i == 0) {
+      flag = 1;
+    }
+  }
+  if (flag == 0 && item != 1) return item;
+}
+
+console.log(primeNumbers);
