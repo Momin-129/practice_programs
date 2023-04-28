@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <label for="counter">Counter:</label>
+    <input type="text" id="counter" value="0" />
+    <button type="button" value="+" onclick="changValue(this)">+</button>
+    <button type="button" value="-" onclick="changValue(this)">-</button>
+    <button type="button" value="reset" onclick="changValue(this)">
+      Reset
+    </button>
+    <script>
+      function changValue(e) {
+        let box = document.getElementById("counter");
+        let counter = parseInt(box.value);
+        if (e.value == "+") counter++;
+        else if (e.value == "-" && counter > 0) counter--;
+        else counter = 0;
+        box.value = counter;
+      }
+    </script>
+  </body>
+</html>
