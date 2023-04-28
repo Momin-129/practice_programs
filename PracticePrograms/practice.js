@@ -4,10 +4,10 @@ let obj1 = {
 
 let obj2 = {
   age: 15,
+  display: function (location) {
+    console.log(this.age, location);
+  },
 };
 
-function display() {
-  console.log(this.age);
-}
-
-display.call(obj2);
+let x = obj2.display.bind(obj1);
+x("Jammu");
