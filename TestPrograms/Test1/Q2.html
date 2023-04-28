@@ -1,20 +1,44 @@
-//Q2: Check whether a number is armstrong or not
-//Input1: 371
-//Ouput: yes
-//
-//Input2: 321
-//Ouput: no
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+      #output {
+        border: 2px solid black;
+        height: 40px;
+        width: 20%;
+        border-radius: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="input" />
+    <button type="button" onclick="isArmstrong();">GO</button>
+    <br />
+    <div id="output"></div>
 
-let input = 321;
-let arm = input;
-let sum = 0;
-while (arm != 0) {
-  r = arm % 10;
-  sum += r * r * r;
-  arm = Math.floor(arm / 10);
-}
-if (sum == input) {
-  console.log(input + " is an armstrong");
-} else {
-  console.log(input + " is not armstrong ");
-}
+    <script>
+      //Q2: Check whether a number is armstrong or not //Input1: 371 //Ouput: yes //
+      //Input2: 321 //Ouput: no let input = 321;
+      function isArmstrong() {
+        let input = parseInt(document.getElementById("input").value);
+        let sum = 0,
+          arm = input;
+        while (arm != 0) {
+          r = arm % 10;
+          sum += r * r * r;
+          arm = Math.floor(arm / 10);
+        }
+        if (sum == input) {
+          output.innerHTML = input + " is an armstrong";
+        } else {
+          output.innerHTML = input + " is not an armstrong";
+        }
+      }
+    </script>
+  </body>
+</html>

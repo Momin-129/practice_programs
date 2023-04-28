@@ -1,14 +1,41 @@
-//Q1: Sum of digits of a number
-//Input : 12345
-//Output: 15
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+      #output {
+        border: 2px solid black;
+        height: 40px;
+        width: 20%;
+        border-radius: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="input" />
+    <button type="button" onclick="SumOfDigits();">GO</button>
+    <br />
+    <div id="output"></div>
 
-let input = 12345;
-let sum = 0;
-
-while (input != 0) {
-  remainder = input % 10;
-  sum += remainder;
-  input = Math.floor(input / 10);
-}
-
-console.log(sum);
+    <script>
+      function SumOfDigits() {
+        //Q1: Sum of digits of a number //Input : 12345 //Output: 15
+        let input = document.getElementById("input").value;
+        let temp = parseInt(input);
+        let output = document.getElementById("output");
+        let sum = 0,
+          remainder;
+        while (temp != 0) {
+          remainder = temp % 10;
+          sum += remainder;
+          temp = Math.floor(temp / 10);
+        }
+        output.innerHTML = "<b>Sum of Digits of " + input + " = </b>" + sum;
+      }
+    </script>
+  </body>
+</html>

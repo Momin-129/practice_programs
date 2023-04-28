@@ -1,11 +1,40 @@
-//Q3: Count number of even and odd numbers in a given array
-let arr = [3, 6, 8, 7, 13, 98, 76];
-let e = 0,
-  o = 0;
-for (var i of arr) {
-  if (i % 2 == 0) e++;
-  else o++;
-}
-
-console.log("Total Even Numbers in array are: " + e);
-console.log("Total Odd Numbers in array are: " + o);
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+      #output {
+        border: 2px solid black;
+        height: 40px;
+        width: 20%;
+        border-radius: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="input" />
+    <span>Enter comma seprated elements</span>
+    <button type="button" onclick="oddEvenCount();">GO</button>
+    <div id="output"></div>
+    <script>
+      //Q3: Count number of even and odd numbers in a given array
+      let list = [];
+      function oddEvenCount() {
+        // let list = [3, 6, 8, 7, 13, 98, 76];
+        let str = document.getElementById("input");
+        let evenCount = 0,
+          oddCount = 0;
+        for (var i of arr) {
+          if (i % 2 == 0) evenCount++;
+          else oddCount++;
+        }
+        console.log("Total Even Numbers in array are: " + evenCount);
+        console.log("Total Odd Numbers in array are: " + oddCount);
+      }
+    </script>
+  </body>
+</html>
