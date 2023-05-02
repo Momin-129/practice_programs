@@ -43,7 +43,6 @@ showBtn.addEventListener("click", function () {
   let gender = localStorage.getItem("gender");
   let languages = localStorage.getItem("languages");
   let identity = localStorage.getItem("identity");
-  alert(fullname);
   let msg = `
     <h4>Personal Details</h4>
     <table style="text-align:left;">
@@ -71,4 +70,5 @@ showBtn.addEventListener("click", function () {
     </table>
     `;
   document.getElementById("showDetails").innerHTML = msg;
+  document.getElementById("showDetails").style.display = "block";
 });
