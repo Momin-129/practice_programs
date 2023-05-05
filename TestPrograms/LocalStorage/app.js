@@ -1,4 +1,4 @@
-let record = [];
+let record = JSON.parse(localStorage.getItem("record"));
 let dataArray;
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
@@ -7,11 +7,10 @@ form.addEventListener("submit", (e) => {
   const obj = Object.fromEntries(formData);
 
   let Languages = formData.getAll("language");
-  obj.language = JSON.stringify(Languages);
+  obj.language = Languages;
 
   record.push(obj);
-  let entry = JSON.stringify(record);
-  localStorage.setItem("record", entry);
+  localStorage.setItem("record", JSON.stringify(record));
   form.reset();
 
   document.getElementById("showDetails").style.display = "none";
@@ -23,10 +22,9 @@ document.getElementById("showBtn").addEventListener("click", () => {
   let row = document.getElementById("gridRow");
   row.innerHTML = "";
 
-  let dataString = localStorage.getItem("record");
-  dataArray = JSON.parse(dataString);
+  record = JSON.parse(localStorage.getItem("record"));
 
-  for (eachRecord of dataArray) {
+  for (eachRecord of record) {
     let col = document.createElement("div");
     col.classList.add("col-md-4", "col-sm-12");
     row.appendChild(col);
