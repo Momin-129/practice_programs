@@ -1,7 +1,7 @@
 let promise = new Promise((resolve, reject) => {
-  const fetchData = fetch("https://jsonplaceholder.typicode.com/todos/1");
+  const fetchData = fetch("https://dummyjson.com/products/");
 
   resolve(fetchData);
 });
 
-promise.then((res) => console.log(res)).catch((rej) => console.log(rej));
+promise.then((res) => res.json()).then((res) => console.log(res));
