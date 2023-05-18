@@ -1,0 +1,15 @@
+.box {
+  margin-top: 10%;
+}
+
+.box .col-md-4 {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  width: 20vh;
+  height: 20vh;
+}
+
+#token {
+  font-size: 100px;
+}
