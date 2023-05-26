@@ -13,23 +13,43 @@
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="container box">
-      <div class="row d-flex justify-content-center" id="r0" value="0">
-        <div class="col-md-4" id="0"></div>
-        <div class="col-md-4" id="1"></div>
-        <div class="col-md-4" id="2"></div>
+    <div class="container text-center mt-5" id="info"></div>
+    <div class="container text-center mt-3 img">
+      <img src="excited.gif" alt="" id="winImage" />
+      <br />
+      <button
+        type="button"
+        class="btn btn-light"
+        onclick="window.location.reload()"
+      >
+        Restart Game
+      </button>
+    </div>
+    <div class="container box mt-2">
+      <span class="top"></span>
+      <span class="bottom"></span>
+      <span class="centerH"></span>
+      <span class="centerV"></span>
+      <span class="left"></span>
+      <span class="right"></span>
+      <span class="leftToright"></span>
+      <span class="rightToleft"></span>
+      <div class="row d-flex justify-content-center" id="r0">
+        <div class="col-md-4 bl bt" id="0"></div>
+        <div class="col-md-4 bt" id="1"></div>
+        <div class="col-md-4 bt br" id="2"></div>
       </div>
-      <div class="row d-flex justify-content-center" id="r1" value="1">
-        <div class="col-md-4" id="0"></div>
-        <div class="col-md-4" id="1"></div>
-        <div class="col-md-4" id="2"></div>
+      <div class="row d-flex justify-content-center" id="r1">
+        <div class="col-md-4 bl" id="3"></div>
+        <div class="col-md-4" id="4"></div>
+        <div class="col-md-4 br" id="5"></div>
       </div>
-      <div class="row d-flex justify-content-center" id="r2" value="2">
-        <div class="col-md-4" id="0"></div>
-        <div class="col-md-4" id="1"></div>
-        <div class="col-md-4" id="2"></div>
+      <div class="row d-flex justify-content-center" id="r2">
+        <div class="col-md-4 bb bl" id="6"></div>
+        <div class="col-md-4 bb" id="7"></div>
+        <div class="col-md-4 bb br" id="8"></div>
       </div>
     </div>
   </body>
-  <script src="script/app.js"></script>
+  <script src="script/app.js" type="module"></script>
 </html>

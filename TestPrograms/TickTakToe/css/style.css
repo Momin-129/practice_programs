@@ -1,5 +1,72 @@
 .box {
-  margin-top: 10%;
+  position: relative;
+  width: max-content;
+}
+
+.top {
+  left: 0;
+  top: 100px;
+  position: absolute;
+  width: 100%;
+  border: 5px solid red;
+  display: none;
+}
+.bottom {
+  left: 0;
+  top: 82%;
+  position: absolute;
+  width: 100%;
+  border: 5px solid red;
+  display: none;
+}
+.centerH {
+  left: 0;
+  top: 50%;
+  position: absolute;
+  width: 100%;
+  border: 5px solid red;
+  display: none;
+}
+.left {
+  left: 80px;
+  position: absolute;
+  height: 100%;
+  border: 5px solid red;
+  display: none;
+}
+.right {
+  right: 85px;
+  position: absolute;
+  height: 100%;
+  border: 5px solid red;
+  display: none;
+}
+.centerV {
+  left: 50%;
+  position: absolute;
+  height: 100%;
+  border: 5px solid red;
+  display: none;
+}
+.leftToright {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 140%;
+  border: 5px solid red;
+  transform: rotate(45deg);
+  transform-origin: top left;
+  display: none;
+}
+.rightToleft {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 140%;
+  border: 5px solid red;
+  transform: rotate(-45deg);
+  transform-origin: right;
+  display: none;
 }
 
 .box .col-md-4 {
@@ -8,8 +75,34 @@
   border: 1px solid black;
   width: 20vh;
   height: 20vh;
+  font-size: 100px;
+}
+.box .col-md-4:hover {
+  background-color: #ffb3ff;
+  opacity: 0.5;
 }
 
-#token {
-  font-size: 100px;
+.bt {
+  border-top: none !important;
+}
+.bb {
+  border-bottom: none !important;
+}
+.bl {
+  border-left: none !important;
+}
+.br {
+  border-right: none !important;
+}
+
+#info {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#winImage {
+  width: 200px;
+}
+.img {
+  display: none;
 }
