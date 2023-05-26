@@ -43,7 +43,7 @@ export function drawLine(winSet) {
   else if (winArray === [2, 5, 8].toString()) line = "right";
   else if (winArray === [2, 4, 6].toString()) line = "rightToleft";
   else if (winArray === [3, 4, 5].toString()) line = "centerH";
-  else if (winArray === [6, 7, 7].toString()) line = "bottom";
+  else if (winArray === [6, 7, 8].toString()) line = "bottom";
 
   return line;
 }
